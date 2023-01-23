@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class EmployeeModel extends Model
 {
@@ -13,8 +13,8 @@ class EmployeeModel extends Model
     protected $table = 'employees';
     public $timestamps = false;
 
-    public function goals(): HasMany
+    public function goal(): HasOne
     {
-        return $this->hasMany(GoalModel::class, 'employee_id');
+        return $this->HasOne(GoalModel::class, 'employee_id');
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::post('employee/goal', [EmployeeController::class, 'getCurrencies']);
+Route::post('employee/goal', [EmployeeController::class, 'updateEmployeeGoal']);

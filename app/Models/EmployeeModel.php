@@ -11,6 +11,7 @@ class EmployeeModel extends Model
     use HasFactory;
 
     protected $table = 'employees';
+    public $timestamps = false;
 
     public function goals(): HasMany
     {

@@ -11,6 +11,7 @@ class GoalModel extends Model
     use HasFactory;
 
     protected $table = 'goals';
+    public $timestamps = false;
 
     public function employee(): BelongsTo
     {
